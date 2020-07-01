@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "tstakscluster-14c4"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "tstakscluster-14c4"
+    spec:
+      containers:
+        - name: "tstakscluster-14c4"
+          image: "tstregistery2.azurecr.io/tstakscluster"
+          ports:
+          - containerPort: 80
